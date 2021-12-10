@@ -33,8 +33,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/transcation/bayar','TransactionController@bayar');
     Route::get('/transcation/history','TransactionController@history');
     Route::get('/transcation/laporan/{id}','TransactionController@laporan');
-    Route::get('/pos', function () {
-        return view('pos');
+    Route::get('/clientes', function () {
+        return view('clientes.clientes');
     });
 });
 

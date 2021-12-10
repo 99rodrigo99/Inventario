@@ -188,7 +188,7 @@
                                 <h3 class="mb-0">Total</h3>
                             </div>
                             <div class="col-6 text-right">
-                                <h2>{{ number_format($data_total['total'], 0, ',', '.') }}</h2>
+                                <h2>$ {{ number_format($data_total['total'], 0, ',', '.') }}</h2>
                             </div>
                         </div>
                         <div class="row">
