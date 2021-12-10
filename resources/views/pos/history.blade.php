@@ -10,19 +10,19 @@
                     <table class="table table-sm">
                         <tr>
                             <th>No</th>
-                            <th>Nomor Invoices</th>
-                            <th>Admin</th>
-                            <th>Bayar</th>
+                            <th>Numero de factura</th>
+                            <th>Vendedor</th>
+                            <th>Pago</th>
                             <th>Total</th>
-                            <th>Aksi</th>
+                            <th>Imprimir</th>
                         </tr>
                         @foreach ($history as $index=>$item)
                             <tr>
                                 <td>{{$index+1}}</td>
                                 <td>{{$item->invoices_number}}</td>
                                 <td>{{$item->user->name}}</td>
-                                <td>{{$item->pay}}</td>
-                                <td>{{$item->total}}</td>
+                                <td>{{number_format($item->pay, 0, ',', '.')}}</td>
+                                <td>{{number_format($item->total, 0, ',', '.')}}</td>
                             <td><a href="{{url('/transcation/laporan', $item->invoices_number )}}" class="btn btn-primary btn-sm"><i class="fas fa-print"></i></a></td>
                             </tr>
                         @endforeach                        
