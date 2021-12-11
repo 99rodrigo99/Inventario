@@ -34,7 +34,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/transcation/history','TransactionController@history');
     Route::get('/transcation/laporan/{id}','TransactionController@laporan');
     Route::get('/clientes', function () {
-        return view('clientes.clientes');
+        return view('clientes.index');
     });
 });
 

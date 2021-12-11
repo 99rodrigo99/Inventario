@@ -37,7 +37,7 @@
                                         <td><h1>{{$item->qty}}</h1></td>
                                         <td><h1>{{$item->product->name}}</h1>
                                         <br>
-                                        <h1>{{($item->product->price)*($item->qty)}}</h1>
+                                        <h1>$ {{ number_format(($item->product->price)*($item->qty), 0, ',', '.')}}</h1>
                                     </td>
                                     </tr>
                                 @endforeach
@@ -45,7 +45,7 @@
                         </table>
                     </div>
                 </div> 
-                <h1 class="mt-5">Total: {{ $transaksi->total }}</h1>        
+                <h1 class="mt-5">Total: $ {{ number_format($transaksi->total, 0, ',', '.') }}</h1>        
             </div>
         </div>
     </div>
