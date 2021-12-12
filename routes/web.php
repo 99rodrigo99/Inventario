@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+use Mike42\Escpos\PrintConnectors\FilePrintConnector;
+use Mike42\Escpos\Printer;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 | <!-- © 2020 Copyright: Tahu Coding -->
 */
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,6 +37,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/transcation/bayar','TransactionController@bayar');
     Route::get('/transcation/history','TransactionController@history');
     Route::get('/transcation/laporan/{id}','TransactionController@laporan');
+    Route::get('/transcation/imprimir/{id}','TransactionController@laporann');
     Route::get('/clientes', function () {
         return view('clientes.index');
     });

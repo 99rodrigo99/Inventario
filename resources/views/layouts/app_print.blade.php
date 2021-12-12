@@ -36,7 +36,7 @@
                         <a href="{{ URL::previous() }}" class="btn btn-danger float-right btn-sm"><i class="fas fa-arrow-left"></i>Regresar</a>
                     </div>
                     <div class="col">
-                        <a class="btn btn-success float-right btn-sm" onclick="window.print()"><i class="fas fa-print"></i>Imprimir</a>
+                        <a class="btn btn-success float-right btn-sm" href="{{url('/transcation/imprimir', $item->invoices_number )}}"><i class="fas fa-print"></i>Imprimir</a>
                     </div>    
 
                 <!-- User -->

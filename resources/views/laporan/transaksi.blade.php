@@ -1,22 +1,27 @@
 @extends('layouts.app_print')
 <!-- © 2020 Copyright: Tahu Coding -->
 @section('content')
+<style>
+    H1{
+        font-size: 1rem;
+    }
+</style>
     <div >
-        <div class="card" style="width: 35rem;">
+        <div class="card" style="width: 50rem;">
             <div class="card-body">
                 <h1 class="card-title">DEPÓSITO DE CERVEZA EL LLANERO</h1>
                 <div class="row">
                     <div class="col-sm-4">
                         <table class="table table-borderless">
                             <tr>
-                                <td width="38%" class="font-weight-bold"><h1>Invoices Number: {{ $transaksi->invoices_number }}</h1>
+                                <td width="358%"><p>Invoices Number: {{ $transaksi->invoices_number }}</p>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="38%"><h1>Vendedor: {{ $transaksi->user->name }}</h1></td>
+                                <td width="38%"><h3>Vendedor: {{ $transaksi->user->name }}</h3></td>
                             </tr>
                             <tr>
-                                <td width="38%"><h1>Fecha: {{ $transaksi->created_at }}</h1></td>
+                                <td width="38%"><h3>Fecha: {{ $transaksi->created_at }}</h3></td>
                             </tr>
                         </table>
                     </div>
